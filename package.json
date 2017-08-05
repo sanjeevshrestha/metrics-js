@@ -1,0 +1,39 @@
+{
+  "name": "metrics-graphite",
+  "version": "0.0.1",
+  "description": "Graphite Metrics in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "clean": "rimraf dist",
+    "start": "npm-run-all clean --parallel watch:build watch:server --print-label",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon './dist/index.js' --watch './dist'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sanjeevshrestha/metrics-js.git"
+  },
+  "keywords": [
+    "Graphite",
+    "Metrics",
+    "Javascript"
+  ],
+  "author": "Sanjeev Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjeevshrestha/metrics-js/issues"
+  },
+  "homepage": "https://github.com/sanjeevshrestha/metrics-js#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "tslint": "^5.5.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.4.2"
+  }
+}
